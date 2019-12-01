@@ -2,38 +2,61 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="com.example.dogs.view.DetailsFragment">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="124dp"
-            android:layout_height="27dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="Details Fragment"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/buttonList"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/dogImage"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:clickable="true"
-            android:src="@drawable/ic_view_list"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:scaleType="fitCenter"
+            android:minHeight="200dp"
+            android:layout_alignParentTop="true"
+            android:src="@mipmap/ic_dog_icon"/>
+
+        <TextView
+            android:id="@+id/dogTitle"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/dogImage"
+            android:layout_height="wrap_content"
+            android:text="Dog name"
+            style="@style/Title"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4dp"/>
+
+        <TextView
+            android:id="@+id/dogPurpose"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/dogTitle"
+            android:layout_height="wrap_content"
+            android:text="Dog purpose"
+            style="@style/text"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4dp"/>
+
+        <TextView
+            android:id="@+id/dogLifespan"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/dogPurpose"
+            android:layout_height="wrap_content"
+            android:text="Dog Lifespan"
+            style="@style/text"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4dp"/>
+
+        <TextView
+            android:id="@+id/dogTemperament"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/dogLifespan"
+            android:layout_height="wrap_content"
+            android:text="Dog Temperament"
+            style="@style/text"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4dp"/>
+
+
+    </RelativeLayout>
 
 </layout>

@@ -17,22 +17,24 @@ import kotlinx.android.synthetic.main.fragment_list.*
  */
 class DetailsFragment : Fragment() {
 
+    private var dogUuid = 0
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_details, container, false)
+
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        buttonList.setOnClickListener {
-            val action = DetailsFragmentDirections.actionListFragment()
-            Navigation.findNavController(it).navigate(action)
+        arguments?.let {
+            dogUuid = DetailsFragmentArgs.fromBundle(it).dogUuid
         }
     }
-
 
 }
