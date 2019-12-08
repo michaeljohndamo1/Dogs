@@ -14,7 +14,7 @@
             android:scaleType="fitCenter"
             android:minHeight="200dp"
             android:layout_alignParentTop="true"
-            android:src="@mipmap/ic_dog_icon"/>
+            android:src="@mipmap/ic_dog_icon_round"/>
 
         <TextView
             android:id="@+id/dogTitle"
